@@ -1,28 +1,35 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- *
- * @format
- */
+import { View, Text, Button, SafeAreaView, Platform } from 'react-native'
+import React from 'react'
+import { appEvents } from './events/appEvents'
+import Routes from './src/Navigations/Routes'
 
-import { NewAppScreen } from '@react-native/new-app-screen';
-import { StatusBar, StyleSheet, useColorScheme, View } from 'react-native';
+const App = () => {
+  const onSignUp = async () => {
+    try {
+      await appEvents("signup", {
+        email: "testuser@gmail.com",
+        userName: "TestUser",
+      })
 
-function App() {
-  const isDarkMode = useColorScheme() === 'dark';
-
+    } catch (error) {
+      console.log('error', error)
+    }
+  }
   return (
-    <View style={styles.container}>
-      <StatusBar barStyle={isDarkMode ? 'light-content' : 'dark-content'} />
-      <NewAppScreen templateFileName="App.tsx" />
-    </View>
-  );
+    <SafeAreaView style={{ flex: 1, 
+    }}>
+      <Routes/>
+      {/* <View style={{ flex: 1, borderWidth: 1, 
+        marginTop: Platform.OS === 'android' ? 40 : 0, paddingHorizontal:10 }}>
+
+        <Text style={{ color: "white", fontSize: 20 }}>App 12121</Text>
+        <View style={{ justifyContent: 'center', alignItems: 'center', }}>
+
+          <Button title='SIgnup' onPress={onSignUp}  />
+        </View>
+      </View> */}
+    </SafeAreaView>
+  )
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-  },
-});
-
-export default App;
+export default App

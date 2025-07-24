@@ -16,6 +16,12 @@ end
 
 target 'Bgtask' do
   config = use_native_modules!
+  use_frameworks! :linkage => :static
+  $RNFirebaseAsStaticFramework = true
+
+  $RNFirebaseAnalyticsEnableAdSupport = true
+
+  $RNFirebaseAnalyticsWithoutAdIdSupport = true  // agr this is not needed, but keeping it for compatibility
 
   use_react_native!(
     :path => config[:reactNativePath],

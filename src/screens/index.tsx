@@ -1,0 +1,10 @@
+export {default as Notification} from './Notification/Notification';
+export {default as CreatePost} from './CreatePost/CreatePost';
+export {default as Home} from './Home/Home';
+export {default as Initial} from './Intial/Initial';
+export {default as Profile} from './Profile/Profile';
+export {default as Search} from './Search/Search';
+export {default as EditPost} from './EditPost/EditPost';
+export {default as PostDetails} from './PostDetails/PostDetails';
+export {default as Login} from './Login/Login';
+export {default as SignUp} from './SignUp/SignUp';

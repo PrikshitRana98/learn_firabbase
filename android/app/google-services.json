@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "947146355132",
+    "project_id": "learn-firebase-e9f36",
+    "storage_bucket": "learn-firebase-e9f36.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:947146355132:android:318d208b69cc183c16fbb9",
+        "android_client_info": {
+          "package_name": "com.bgtask"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDqUl2EzaxvbztqHuOIbpKxeilHZnhMFrU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
